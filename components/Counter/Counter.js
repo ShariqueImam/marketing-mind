@@ -1,6 +1,5 @@
 import React from "react";
 import SingleCounter from "./SingleCounter";
-import Slide from "react-reveal/Slide";
 
 const style = {
   wrapper: "h-[60%] flex flex-col py-8",
@@ -11,7 +10,6 @@ const style = {
 };
 const Counter = () => {
   return (
-    <Slide bottom>
       <div className={style.wrapper}>
         <section className="m-auto h-[20%] flex py-7 md:py-12">
           <h2 className="text-3xl sm:text-5xl md:text-5xl text-gray-900 m-auto font-semibold">
@@ -39,7 +37,6 @@ const Counter = () => {
           </div>
         </div>
       </div>
-    </Slide>
   );
 };
 
