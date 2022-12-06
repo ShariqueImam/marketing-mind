@@ -1,7 +1,6 @@
 import React from 'react'
 import Image from 'next/image';
 import FutureDetails from './FutureDetails'
-import Spin from 'react-reveal/Spin';
 
 const FutureContent = () => {
     return (
@@ -11,11 +10,9 @@ const FutureContent = () => {
                 <FutureDetails />
             </section>
             {/* adding the side image of the content */}
-            {/* <Spin duration={1000}> */}
                 <section className=' w-[100%] sm:w-[40%] my-12 scale-[0.8] md:scale-[1]'>
                     <Image src={"/desktop.svg"} height={500} width={500} />
                 </section>
-            {/* </Spin> */}
         </div>
     )
 }
