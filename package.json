@@ -1,0 +1,36 @@
+{
+  "name": "test-1",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@emotion/react": "^11.10.5",
+    "@emotion/styled": "^11.10.5",
+    "@mui/material": "^5.10.16",
+    "@sanity/client": "^3.4.1",
+    "animate.css": "^4.1.1",
+    "axios": "^1.2.1",
+    "components": "^0.1.0",
+    "framer-motion": "^7.6.19",
+    "next": "13.0.6",
+    "react": "18.2.0",
+    "react-countup": "^6.4.0",
+    "react-dom": "18.2.0",
+    "react-icons": "^4.7.1",
+    "react-reveal": "^1.2.2",
+    "react-scroll": "^1.8.8",
+    "react-visibility-sensor": "^5.1.1",
+    "styled": "^1.0.0",
+    "styled-components": "^5.3.6"
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.4.13",
+    "postcss": "^8.4.19",
+    "tailwindcss": "^3.2.4"
+  }
+}
