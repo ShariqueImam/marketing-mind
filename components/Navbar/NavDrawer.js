@@ -7,7 +7,7 @@ import Image from "next/image";
 import useWindowSize from "../../hooks/useWindowSize";
 import { AiOutlineShoppingCart } from "react-icons/ai";
 
-const NavDrawer = () => {
+const NavDrawer = (props) => {
   const { width } = useWindowSize();
   const [state, setState] = React.useState({
     right: false,
@@ -57,10 +57,18 @@ const NavDrawer = () => {
           </div>{" "}
           {/* adding the navs */}
           <div className="flex  flex-col">
-            <li className={style.list}>HOME</li>
-            <li className={style.list}>SERVICES</li>
-            <li className={style.list}>WHY US</li>
-            <li className={style.list}>ACHIEVEMENTS</li>
+            <li className={style.list} onClick={() => props.onScroll("home")}>
+              HOME
+            </li>
+            <li className={style.list} onClick={() => props.onScroll("services")}>
+              SERVICES
+            </li>
+            <li className={style.list} onClick={() => props.onScroll("why")}>
+              WHY US
+            </li>
+            <li className={style.list} onClick={() => props.onScroll("achievements")}>
+              ACHIEVEMENTS
+            </li>
           </div>
           <Link href="/contact">
             <button className="mx-auto bg-white rounded text-gray-900 px-12 py-2 mt-80  cursor-pointer hover:opacity-[0.9]">

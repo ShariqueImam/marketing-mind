@@ -17,7 +17,7 @@ const Navbar1 = () => {
     navContainer: "flex items-center justify-center",
     cartButton:
       "flex items-center justify-center mx-5 bg-gray-200 text-gray-900 px-3 py-2 text-sm rounded hover:opacity-[0.9]",
-    img: "",
+    img: "cursor-pointer",
   };
   const [Enter, setEnter] = useState(false);
   return (
@@ -25,7 +25,9 @@ const Navbar1 = () => {
     <div className={style.wrapper}>
       <nav className={style.mainNav}>
         <div className={style.img}>
-          <Image src={"/logo.png"} height={100} width={100} />
+          <Link href="/">
+            <Image src={"/logo.png"} height={100} width={100} />
+          </Link>
         </div>
         <div className="flex items-center justify-center">
           <div className={style.navContainer}>

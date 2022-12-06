@@ -16,18 +16,22 @@ const Navbar = (props) => {
     navContainer: "flex items-center justify-center",
     cartButton:
       "flex items-center justify-center mx-5 bg-gray-200 text-gray-900 px-3 py-2 text-sm rounded hover:opacity-[0.9]",
-    img: "",
+    img: "cursor-pointer",
   };
   const [Enter, setEnter] = useState(false);
   const [Item, setItem] = useState("home");
   props.onScroll(Item);
+  const handleScroll = (val) => {
+    setItem(val);
+  };
   return (
     // install the mui first
     <div className={style.wrapper}>
       <nav className={style.mainNav}>
         <div className={style.img}>
-          <Image src={"/logo.png"} height={100} width={100} />
-          {/* <img src={""} height={1} width={1} /> */}
+          <Link href="/">
+            <Image src={"/logo.png"} height={100} width={100} />
+          </Link>
         </div>
         <div className="flex items-center justify-center">
           <div className={style.navContainer}>
@@ -61,7 +65,7 @@ const Navbar = (props) => {
         </div>
       </nav>
       <div className={style.navDrawer}>
-        <NavDrawer />
+        <NavDrawer onScroll={handleScroll} />
       </div>
     </div>
   );

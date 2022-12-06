@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import Image from "next/image";
 import Signature from "./Signature";
 import axios from "axios";
-
+import Link from "next/link";
 const style = {
   wrapper: "ml-0 bg-gray-900",
   footerNav: "flex flex-col md:flex-row mt-2 md:mt-8 w-[100%] pt-12 md:py-24 ",
@@ -16,7 +16,7 @@ const style = {
   list1:
     "text-white decoration-none list-none my-2 cursor-pointer border-move-animation1  hover:opacity-[0.85]",
 };
-const Footer = () => {
+const Footer = (props) => {
   const [Email, setEmail] = useState("");
   const tokenWithWriteAccess =
     "ski1HTp5AW9fFrV1eLJDUfwsda3UGso5dafXgaNicwqeopE5aYNAFayHx8j7Oxq4S6U6KqY27ssDHdo1uAxY8fIXbHo9H7EuneTC4f5zkrr2gu21Pk7jpgedUpO8XE5Yd3GaIgTsf9Thz1gRSsF5Hwd7CQQL8bpBuqvZjW0XACWRx3IxUNMQ";
@@ -56,13 +56,23 @@ const Footer = () => {
         </div>
         <div className={style.right}>
           <div className={style.col1}>
-            <li className={style.list}>HOME</li>
-            <li className={style.list}>SERVICES</li>
-            <li className={style.list}>WHY US</li>
+            <li className={style.list} onClick={() => props.onScroll("home")}>
+              HOME
+            </li>
+            <li className={style.list} onClick={() => props.onScroll("services")}>
+              SERVICES
+            </li>
+            <li className={style.list} onClick={() => props.onScroll("why")}>
+              WHY US
+            </li>
           </div>
           <div className={style.col2}>
-            <li className={style.list1}>ACHIEVEMENTS</li>
-            <li className={style.list1}>CONTACT</li>
+            <li className={style.list1} onClick={() => props.onScroll("achievements")}>
+              ACHIEVEMENTS
+            </li>
+            <Link href="/contact">
+              <li className={style.list1}>CONTACT</li>
+            </Link>
           </div>
         </div>
       </div>

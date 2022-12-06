@@ -47,7 +47,7 @@ export default function Main() {
         <div className="achievements">
           <Counter />
         </div>
-        <Footer />
+        <Footer onScroll={onScroll}/>
       </div>
     </Animator>
   );
